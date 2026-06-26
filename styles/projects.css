@@ -721,7 +721,7 @@ html, body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.37) 0%, rgba(0, 0, 0, 0.178) 70%, transparent 100%);
   padding: 36px 20px 20px;
   color: #fff;
   transition: padding 0.3s ease;
@@ -729,12 +729,14 @@ html, body {
 
 .card-desc-overlay h3 {
   font-family: var(--font-heading);
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 700;
+  color: #fff !important;
   margin-bottom: 4px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   line-height: 1.2;
+  background-color: rgba(17, 17, 17, 0.534);
 }
 
 .card-desc-overlay p {

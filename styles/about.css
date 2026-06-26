@@ -701,7 +701,7 @@ body {
     background: #fff;
     backdrop-filter: blur(6px);
     border-radius: 12px;
-    padding: 50px 25px;
+    padding: 20px 15px;
     text-align: center;
     border-bottom: 4px solid transparent;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
@@ -713,9 +713,31 @@ body {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
-.value-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1.2rem;
+.value-icon{
+    width:75px;
+    height:75px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    background:rgba(76,175,80,.12);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:.35s ease;
+}
+
+.value-icon i{
+    font-size:32px;
+    color: #f7e337;
+    transition:.35s ease;
+}
+
+.value-card:hover .value-icon{
+    background:#4CAF50;
+    transform:translateY(-6px);
+}
+
+.value-card:hover .value-icon i{
+    color:#fff;
 }
 
 .value-card h4 {

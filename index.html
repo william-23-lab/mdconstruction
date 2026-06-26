@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+   <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
 
@@ -56,7 +58,7 @@
     <!-- Slide 1 — Video -->
     <div class="slide active">
         <video class="slide-video" autoplay muted loop playsinline>
-            <source src="videos/hvideo.mp4" type="video/mp4">
+            <source src="videos/hvideo.mov" type="video/mp4">
         </video>
         <div class="overlay"></div>
         <div class="hero-content">
@@ -68,40 +70,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Slide 2 -->
-    <div class="slide" style="background-image: url('images/HALL\ 3.png');">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1 data-aos="fade-down" data-aos-delay="100">Experts in Architecture & Interior Design</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Modern, creative, and efficient designs tailored to your lifestyle.</p>
-            <div class="hero-buttons">
-                <a href="#design" class="btn btn-primary">Our Designs</a>
-                <a href="#projects" class="btn btn-secondary">View Projects</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 3 -->
-    <div class="slide" style="background-image: url('images/red6.png');">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1 data-aos="slide-left" data-aos-delay="100">Reliable Estate Development</h1>
-            <p data-aos="fade-up" data-aos-delay="100">We develop affordable and luxurious living spaces across Ghana.</p>
-            <div class="hero-buttons">
-                <a href="#estates" class="btn btn-primary">View Estates</a>
-                <a href="#contact" class="btn btn-secondary">Contact Us</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Side Indicators -->
-    <div class="slide-indicators">
-        <span class="indicator active" data-slide="0"><span class="indicator-line"></span><span class="indicator-num">01</span></span>
-        <span class="indicator" data-slide="1"><span class="indicator-line"></span><span class="indicator-num">02</span></span>
-        <span class="indicator" data-slide="2"><span class="indicator-line"></span><span class="indicator-num">03</span></span>
-    </div>
-
 </section>
 
 <!-- Build Prompt Section -->
@@ -114,104 +82,209 @@
 
 
 
-<section class="services">
-  <div class="container">
-  </div>
+<section class="md-services-section">
 
-    <div class="services-grid">
-      <!-- 1. Quantity Surveying -->
-      <div class="service-card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"  data-aos="fade-up" data-aos-delay="100">
-        <div class="service-icon"><i class="fas fa-calculator"></i></div>
-        <h3>Quantity Surveying</h3>
-        <p>Accurate cost estimation and financial management for projects.</p>
-        <a href="#quantity-surveying" class="view-more-btn">View More</a>
-      </div>
-      
-      <!-- 2. Architecture Work -->
-      <div class="service-card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
-        <h3>Architecture Work</h3>
-        <p>Innovative designs tailored to your vision.</p>
-        <a href="#architecture" class="view-more-btn">View More</a>
-      </div>
-      
-      <!-- 3. U-Drain Construction -->
-      <div class="service-card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/download.jpg');" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-icon"><i class="fas fa-water"></i></div>
-        <h3>U-Drain Construction</h3>
-        <p>Expert drainage systems to prevent flooding.</p>
-        <a href="#udrain" class="view-more-btn">View More</a>
-      </div>
-      
-      <!-- 4. Interior & Exterior Design -->
-      <div class="service-card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
-        <h3>Interior & Exterior Design</h3>
-        <p>Aesthetic and functional spaces.</p>
-        <a href="#design" class="view-more-btn">View More</a>
-      </div>
-      
-      <!-- 5. Building Project -->
-      <div class="service-card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-icon"><i class="fas fa-building"></i></div>
-        <h3>Building Project</h3>
-        <p>End-to-end construction management.</p>
-        <a href="#building" class="view-more-btn">View More</a>
-      </div>
-      
-      <!-- 6. Land Surveying -->
-      <div class="service-card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1500380804539-4e1e8c1e7118?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
-        <h3>Land Surveying</h3>
-        <p>Precise boundary marking and analysis.</p>
-        <a href="#surveying" class="view-more-btn">View More</a>
-      </div>
-      
-      <!-- 7. Estimates -->
-      <div class="service-card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-icon"><i class="fas fa-file-invoice-dollar"></i></div>
-        <h3>Estimates</h3>
-        <p>Transparent cost breakdowns.</p>
-        <a href="#estimates" class="view-more-btn">View More</a>
-      </div>
-      
-      <!-- 8. Consultancy Services -->
-      <div class="service-card" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');" data-aos="fade-up" data-aos-delay="100">
-        <div class="service-icon"><i class="fas fa-handshake"></i></div>
-        <h3>Consultancy Services</h3>
-        <p>Expert advice for project success.</p>
-        <a href="#consultancy" class="view-more-btn">View More</a>
-      </div>
+    <div class="md-services-wrapper">
+
+        <!-- Left Content -->
+        <div class="md-services-intro" data-aos="slide-right" data-aos-delay="100">
+            <span class="md-services-tag">---- WHAT WE OFFER</span>
+
+            <h2>
+                Constructing Homes,<br>
+                Creating Futures.
+            </h2>
+
+        </div>
+
+        <div class="md-services-btn-wrap">
+    <a href="#" class="md-btns">
+        View All Services
+        <i class="fas fa-arrow-right"></i>
+    </a>
+</div>
+        
+  <!-- Services Slider -->
+        <div class="md-services-carousel" data-aos="slide-left" data-aos-delay="100">
+
+            <div class="swiper mdSwiper">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="md-service-card">
+                            <img src="images/quantity survey.jpg" alt="Quantity Surveying">
+                            <div class="md-card-body">
+                                <i class="fas fa-calculator"></i>
+                                <h3>Quantity Surveying</h3>
+                                <p>Accurate cost planning, budgeting, and financial management for construction projects.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="md-service-card">
+                            <img src="images/Archis.jpg" alt="Architectural Work">
+                            <div class="md-card-body">
+                                <i class="fas fa-drafting-compass"></i>
+                                <h3>Architectural Work</h3>
+                                <p>Innovative architectural solutions tailored to meet client requirements and industry standards.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="md-service-card">
+                            <img src="images/DRAINAGE.jpg" alt="U-Drain Construction">
+                            <div class="md-card-body">
+                                <i class="fas fa-water"></i>
+                                <h3>U-Drain Construction</h3>
+                                <p>Professional drainage construction services designed for durability and efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="md-service-card">
+                            <img src="images/inter.jpg" alt="Interior & Exterior Design">
+                            <div class="md-card-body">
+                                <i class="fas fa-paint-roller"></i>
+                                <h3>Interior & Exterior Design</h3>
+                                <p>Creative and functional designs that enhance the beauty and value of every property.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="md-service-card">
+                            <img src="images/build-pro.jpg" alt="Building Projects">
+                            <div class="md-card-body"><i class="fas fa-building"></i>
+                                <h3>Building Projects</h3>
+                                <p>End-to-end construction services for residential, commercial, and industrial developments.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="md-service-card">
+                            <img src="images/land surveying.jpeg" alt="Land Surveying">
+                            <div class="md-card-body">
+                                <i class="fas fa-ruler-combined"></i>
+                                <h3>Land Surveying</h3>
+                                <p>Precise land measurements and mapping services to support successful project execution.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="md-service-card">
+                            <img src="images/est.jpg" alt="Estimates">
+                            <div class="md-card-body">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                                <h3>Estimates</h3>
+                                <p>Comprehensive project estimates to help clients plan effectively and manage costs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="md-service-card">
+                            <img src="images/consultancy.jpeg" alt="Consultancy Services">
+                            <div class="md-card-body">
+                                <i class="fas fa-user-tie"></i>
+                                <h3>Consultancy Services</h3>
+                                <p>Expert professional advice and guidance for construction, real estate, and development projects.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="md-slider-controls">
+                <button class="md-prev-btn">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+
+                <button class="md-next-btn">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+        </div>
+
     </div>
-  </div>
+
 </section>
 
-<!-- Why Choose Us Section -->
-<section class="why-choose-us" data-aos="fade-down" data-aos-delay="100">
-  <div class="why-container">
-    <!-- Left Side: Image -->
-    <div class="why-image">
-      <img src="images/IMG_0267.jpg" alt="Construction site">
-    </div>
 
-    <!-- Right Side: Content -->
-    <div class="why-content">
-      <h2>Why Choose Us?</h2>
-      <p>
-        We are committed to delivering high-quality construction services with a focus 
-        on customer satisfaction. Our team of skilled professionals ensures that every 
-        project is completed on time and within budget.
-      </p>
 
-      <ul class="why-list">
-        <li><span>✔</span> Experienced Professionals</li>
-        <li><span>✔</span> Quality Craftsmanship</li>
-        <li><span>✔</span> Customer-Centric Approach</li>
-        <li><span>✔</span> Comprehensive Services</li>
-      </ul>
-    </div>
+
+<div class="section" data-aos="slide-up" data-aos-delay="100">
+
+  <!-- Header -->
+  <div class="section__header">
+    <h2 class="section__title">Why Choose us</h2>
+    <p class="section__subtitle">Expert team, proven strategies, personalized approach, and dedicated support to help your business thrive and grow.</p>
   </div>
-</section>
+
+  <!-- Bento Grid -->
+  <div class="bento">
+
+    <!-- Card 1: 95% — blue, large -->
+    <div class="card card--blue">
+      <div class="card__stat">95%</div>
+      <div class="card__label">Client Satisfaction</div>
+    </div>
+
+    <!-- Card 2: 120+ -->
+    <div class="card card--light" style="grid-column:2; grid-row:1;">
+      <div class="card__stat">120+</div>
+      <div class="card__divider"></div>
+      <div class="card__label">Campaigns Delivered</div>
+    </div>
+
+    <!-- Card 3: 24/7 -->
+    <div class="card card--lights" style="grid-column:1; grid-row:2;">
+      <div class="card__stat">24/7</div>
+      <div class="card__divider"></div>
+      <div class="card__label">Support Available</div>
+    </div>
+
+    <!-- Card 4: Quote -->
+    <div class="card card--quote" style="grid-column:2; grid-row:2;">
+      <div>
+        <div class="card__quote-title">Building Lasting Success</div>
+        <div class="card__quote-text">"Your success is our mission — we don't just deliver results, we build lasting partnerships."</div>
+      </div>
+      <div class="card__quote-author">James Albarn</div>
+    </div>
+
+    <!-- Card 5: 50% — green -->
+    <div class="card card--green" style="grid-column:3; grid-row:2;">
+      <div class="card__stat">50%</div>
+      <div class="card__divider" style="background:rgba(0,100,0,0.15);"></div>
+      <div class="card__label">Engagement Growth</div>
+    </div>
+
+    <!-- Card 6: Photo -->
+    <div class="card card--photo">
+      <img
+        src="images/whs.jpeg"
+        alt="Team collaborating in a modern office"
+      />
+      <svg class="photo-circles" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="80" cy="80" r="50"/>
+        <circle cx="80" cy="80" r="68"/>
+        <circle cx="80" cy="80" r="85"/>
+      </svg>
+    </div>
+
+  </div>
+</div>
+
 
 
 <section class="featured-projects">
@@ -252,89 +325,292 @@
   </div>
 </section>
 
-<section class="testimonials-slider">
-    <div class="testimonials-container" data-aos="slide-left" data-aos-delay="50">
-        <!-- Left Side: Header & Contact -->
-        <div class="testimonials-left">
-            <div class="left-content">
-                <h2>What Our Clients Say</h2>
-                <p>Don't just take our word for it. Here's what our clients have to say about working with MD Construction. We take pride in delivering exceptional results and building lasting relationships.</p>
-                <a href="/contact.html" class="contact-btn">Contact Us Today</a>
-            </div>
+
+
+<section class="faq-section">
+    <div class="faq-container">
+
+        <!-- Left Image -->
+        <div class="faq-image" data-aos="slide-right" data-aos-delay="100">
+            <img src="images/faq.png" alt="Construction Image">
         </div>
 
-        <!-- Right Side: Testimonial Slider -->
-        <div class="testimonials-right" data-aos="slide-right" data-aos-delay="50">
-            <div class="slider-container">
-                <div class="slider-track">
-                    <!-- Testimonial 1 -->
-                    <div class="testimonial-slide active">
-                        <div class="stars">★★★★★</div>
-                        <p>"MD Construction transformed our outdated home into a modern masterpiece. Their attention to detail and professionalism was exceptional throughout the entire process. We couldn't be happier with the results!"</p>
-                        <div class="client-info">
-                            <div class="client-avatar">JS</div>
-                            <div class="client-details">
-                                <strong>John & Sarah Martinez</strong>
-                                <span>Custom Home Renovation</span>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Right Content -->
+        <div class="faq-content" data-aos="slide-left" data-aos-delay="100">
+            <span class="sub-title">— MD CONSTRUCTION</span>
 
-                    <!-- Testimonial 2 -->
-                    <div class="testimonial-slide">
-                        <div class="stars">★★★★★</div>
-                        <p>"From the initial consultation to project completion, the team was communicative, on budget, and delivered ahead of schedule. Their expertise in estate development is truly impressive. Highly recommended!"</p>
-                        <div class="client-info">
-                            <div class="client-avatar">RD</div>
-                            <div class="client-details">
-                                <strong>Robert Davis</strong>
-                                <span>Estate Development</span>
-                            </div>
-                        </div>
-                    </div>
+            <h2>
+                Regular Questions <br>
+                For Customers
+            </h2>
 
-                    <!-- Testimonial 3 -->
-                    <div class="testimonial-slide">
-                        <div class="stars">★★★★★</div>
-                        <p>"We built our dream home with MD Construction. Their expertise and guidance made the complex process feel seamless and enjoyable. The quality of craftsmanship exceeded our expectations in every way."</p>
-                        <div class="client-info">
-                            <div class="client-avatar">TC</div>
-                            <div class="client-details">
-                                <strong>Thomas Chen</strong>
-                                <span>Custom Home Build</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    What Kind Of Warranty Or Guarantee Do You Offer?
+                    <span>↗</span>
+                </button>
+            </div>
 
-                    <!-- Testimonial 4 -->
-                    <div class="testimonial-slide">
-                        <div class="stars">★★★★★</div>
-                        <p>"The MD Construction team handled our commercial project with utmost professionalism. They were responsive, detail-oriented, and delivered exceptional quality. We'll definitely work with them again."</p>
-                        <div class="client-info">
-                            <div class="client-avatar">MJ</div>
-                            <div class="client-details">
-                                <strong>Michael Johnson</strong>
-                                <span>Commercial Construction</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Why Should I Choose Your Company For My Construction Project?
+                    <span>↗</span>
+                </button>
+            </div>
 
-                <!-- Slider Controls -->
-                <div class="slider-controls">
-                    <button class="slider-prev">←</button>
-                    <div class="slider-dots">
-                        <span class="dot active" data-slide="0"></span>
-                        <span class="dot" data-slide="1"></span>
-                        <span class="dot" data-slide="2"></span>
-                        <span class="dot" data-slide="3"></span>
-                    </div>
-                    <button class="slider-next">→</button>
+            <div class="faq-item active">
+                <button class="faq-question">
+                    What Is The Process For Working With Your Company?
+                    <span>↘</span>
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        We start with a consultation, create a detailed project plan,
+                        provide cost estimates, and manage construction from start to
+                        finish while ensuring quality and timely delivery.
+                    </p>
                 </div>
             </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    What Types Of Projects Do You Specialize In?
+                    <span>↗</span>
+                </button>
+            </div>
+
         </div>
+
     </div>
 </section>
+
+<section class="md-testimonials" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="md-testimonial-header">
+        <span>Testimonials</span>
+        <h2>What Our Clients Say</h2>
+        <p>Hear from homeowners, businesses, and developers who trusted MD Construction.</p>
+    </div>
+
+    <div class="md-testimonial-container">
+
+        <button class="md-testimonial-btn md-prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <div class="md-testimonial-content">
+
+            <!-- Left -->
+            <div class="md-testimonial-image">
+
+                <div class="md-circle-bg"></div>
+
+                <img id="clientImage"
+                     src="images/wh.jpeg"
+                     alt="Client">
+
+            </div>
+
+            <!-- Right -->
+            <div class="md-testimonial-text">
+
+                <i class="fas fa-quote-left quote-top"></i>
+
+                <p id="clientReview">
+                    MD Construction exceeded our expectations. The project
+                    was completed on time with outstanding workmanship and
+                    constant communication throughout.
+                </p>
+
+                <i class="fas fa-quote-right quote-bottom"></i>
+
+                <h3 id="clientName">Kwame Mensah</h3>
+
+                <span id="clientRole">
+                    Home Owner
+                </span>
+
+            </div>
+
+        </div>
+
+        <button class="md-testimonial-btn md-next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+    <div class="md-testimonial-dots">
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</section>
+
+
+<!-- ===========================
+        VIDEO SECTION
+============================ -->
+<section class="md-video-section">
+
+    <video autoplay muted loop playsinline class="md-video-bg">
+        <source src="videos/vvv.mov" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="md-video-overlay"></div>
+
+</section>
+
+<!-- ===========================
+        FLOATING CTA
+============================ -->
+<section class="md-floating-cta">
+
+    <div class="md-floating-wrapper">
+
+        <!-- Left Side -->
+        <div class="md-floating-left">
+
+            <h2>Ready to Start Your Construction Project?</h2>
+
+            <form class="md-cta-form">
+
+                <div class="md-email-box">
+
+                    <div class="md-email-input">
+                        <i class="fas fa-envelope"></i>
+                        <input
+                            type="email"
+                            placeholder="Enter your email address"
+                            required>
+                    </div>
+
+                    <button type="submit">
+                        Get Started
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- Right Side -->
+        <div class="md-floating-right">
+
+            <div class="md-team">
+
+                <img src="images/What.jpeg" alt="Engineer">
+                <img src="images/faq.png" alt="Architect">
+                <img src="images/se.jpeg" alt="Project Manager">
+
+                <h4>Speak with Our Engineers</h4>
+
+            </div>
+
+            <p>
+                Get expert advice for your construction project and receive a free consultation from our experienced professionals.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="md-contact-section">
+
+    <div class="md-contact-grid">
+
+        <!-- LEFT SIDE -->
+        <div class="md-contact-left">
+
+            <img src="images/Ndāsiē.jpg"
+                 alt="Construction Worker"
+                 class="md-contact-bg" data-aos="slide-right" data-aos-delay="100">
+
+            <div class="md-contact-form">
+
+                <h3>Have Any Questions?</h3>
+
+                <p>
+                    Contact our team today and let's discuss your project.
+                </p>
+
+                <form>
+
+                    <input type="text" placeholder="Your Name">
+
+                    <div class="md-input-row">
+                        <input type="email" placeholder="Your Email">
+                        <input type="tel" placeholder="Your Phone">
+                    </div>
+
+                    <textarea placeholder="Your Message"></textarea>
+
+                    <button type="submit">
+                        Submit Now
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="md-contact-right">
+            <h2>
+                Your Trusted <br>Partner in<br> Construction.
+            </h2>
+
+            <p>
+                Delivering quality construction solutions with professionalism, innovation, and excellence.
+            </p>
+
+            <div class="md-contact-details">
+
+                <div class="md-detail-box">
+                    <i class="fas fa-phone-alt"></i>
+
+                    <div>
+                        <h4>Phone Number</h4>
+                        <span>+233 XX XXX XXXX</span>
+                    </div>
+                </div>
+
+                <div class="md-detail-box">
+                    <i class="fas fa-clock"></i>
+
+                    <div>
+                        <h4>Opening Hours</h4>
+                        <span>Mon - Fri: 8AM - 5PM</span>
+                    </div>
+                </div>
+
+                <div class="md-detail-box">
+                    <i class="fas fa-location-dot"></i>
+
+                    <div>
+                        <h4>Office Location</h4>
+                        <span>Kumasi, Ghana</span>
+                    </div>
+                </div>
+
+                <div class="bulldozer">
+                <img src="images/bulldozer.png"
+                 alt="Construction Equipment"
+                 class="md-machine" data-aos="fade-left" data-aos-delay="100">
+                 </div>
+
+            </div>
+        </div>
+</section>
+
 
 <footer class="modern-footer">
     <div class="footer-container">
@@ -442,6 +718,7 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="index.js"></script>
 </body>
 </html>

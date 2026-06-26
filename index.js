@@ -5,7 +5,7 @@ const indicators = document.querySelectorAll('.indicator');
 let currentIndex = 0;
 let slideTimer = null;
 const AUTO_INTERVAL = 7000; // 5 seconds
-const VIDEO_SLIDE_INTERVAL = 20000; // 20 seconds for slide 1 (video)
+const VIDEO_SLIDE_INTERVAL = 1000; // 20 seconds for slide 1 (video)
 
 function showSlide(index) {
   if (!slides.length) return;
@@ -15,7 +15,7 @@ function showSlide(index) {
     slide.classList.toggle('active', i === safeIndex);
     const video = slide.querySelector('.slide-video');
     if (video) {
-      video.playbackRate = 0.55;
+      video.playbackRate = 0.8;
       if (i === safeIndex) {
         video.play();
       } else {
@@ -204,3 +204,215 @@ AOS.init({
   easing: 'ease-in-out',
   once: false,
 });
+
+
+const swiper = new Swiper(".mdSwiper", {
+    loop: false,
+    spaceBetween: 25,
+
+    navigation: {
+        nextEl: ".md-next-btn",
+        prevEl: ".md-prev-btn",
+    },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+
+        768: {
+            slidesPerView: 2,
+        },
+
+        1200: {
+            slidesPerView: 3.2,
+        }
+    }
+});
+
+
+swiper.on('reachEnd', function () {
+    document.querySelector('.md-next-btn').style.opacity = '.5';
+});
+
+swiper.on('fromEdge', function () {
+    document.querySelector('.md-next-btn').style.opacity = '1';
+});
+
+
+
+
+const mdSwiper = new Swiper(".mdSwiper", {
+    spaceBetween: 20,
+
+    navigation: {
+        nextEl: ".md-next-btn",
+        prevEl: ".md-prev-btn",
+    },
+
+    breakpoints: {
+
+        0: {
+            slidesPerView: 1.2
+        },
+
+        480: {
+            slidesPerView: 2.2
+        },
+
+        768: {
+            slidesPerView: 2.5
+        },
+
+        1200: {
+            slidesPerView: 3.2
+        }
+    }
+});
+
+
+
+
+// =========================
+// TESTIMONIAL SLIDER
+// =========================
+
+const testimonials = [
+{
+    image: "images/kwaku.jpg",
+    name: "Kwaku Larbi",
+    role: "Home Owner",
+    review: "MD Construction exceeded our expectations. Their team delivered quality work on schedule and kept us informed throughout the project."
+},
+{
+    image: "images/sarah.jpg",
+    name: "Sarah Owusu",
+    role: "Business Owner",
+    review: "Professional, reliable, and highly experienced. They transformed our commercial space beautifully and within budget."
+},
+{
+    image: "images/daniel.jpg",
+    name: "Daniel Asante",
+    role: "Property Developer",
+    review: "From planning to completion, MD Construction handled everything professionally. I highly recommend their services."
+}
+];
+
+const clientImage = document.getElementById("clientImage");
+const clientName = document.getElementById("clientName");
+const clientRole = document.getElementById("clientRole");
+const clientReview = document.getElementById("clientReview");
+
+const prevBtn = document.querySelector(".md-prev");
+const nextBtn = document.querySelector(".md-next");
+
+const dots = document.querySelectorAll(".md-testimonial-dots span");
+
+let testimonialIndex = 0;
+let testimonialTimer;
+
+function updateTestimonial(index){
+
+    if(!clientImage) return;
+
+    clientImage.style.opacity = 0;
+    clientName.style.opacity = 0;
+    clientRole.style.opacity = 0;
+    clientReview.style.opacity = 0;
+
+    setTimeout(()=>{
+
+        clientImage.src = testimonials[index].image;
+        clientName.textContent = testimonials[index].name;
+        clientRole.textContent = testimonials[index].role;
+        clientReview.textContent = testimonials[index].review;
+
+        clientImage.style.opacity = 1;
+        clientName.style.opacity = 1;
+        clientRole.style.opacity = 1;
+        clientReview.style.opacity = 1;
+
+    },250);
+
+    if(dots.length){
+        dots.forEach(dot=>dot.classList.remove("active"));
+        dots[index].classList.add("active");
+    }
+
+}
+
+function nextTestimonial(){
+
+    testimonialIndex++;
+
+    if(testimonialIndex >= testimonials.length){
+        testimonialIndex = 0;
+    }
+
+    updateTestimonial(testimonialIndex);
+
+}
+
+function prevTestimonial(){
+
+    testimonialIndex--;
+
+    if(testimonialIndex < 0){
+        testimonialIndex = testimonials.length - 1;
+    }
+
+    updateTestimonial(testimonialIndex);
+
+}
+
+function startTestimonialAuto(){
+
+    stopTestimonialAuto();
+
+    testimonialTimer = setInterval(()=>{
+        nextTestimonial();
+    },5000);
+
+}
+
+function stopTestimonialAuto(){
+
+    clearInterval(testimonialTimer);
+
+}
+
+if(clientImage){
+
+    updateTestimonial(testimonialIndex);
+
+    if(nextBtn){
+        nextBtn.addEventListener("click",()=>{
+            nextTestimonial();
+            startTestimonialAuto();
+        });
+    }
+
+    if(prevBtn){
+        prevBtn.addEventListener("click",()=>{
+            prevTestimonial();
+            startTestimonialAuto();
+        });
+    }
+
+    dots.forEach((dot,index)=>{
+
+        dot.addEventListener("click",()=>{
+
+            testimonialIndex = index;
+
+            updateTestimonial(testimonialIndex);
+
+            startTestimonialAuto();
+
+        });
+
+    });
+
+    startTestimonialAuto();
+
+}
